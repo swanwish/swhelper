@@ -34,7 +34,7 @@ func showCurrentTime(c *cli.Context) error {
 
 func showCurrentWeekNum(c *cli.Context) error {
 	now := time.Now()
-	_, week := now.ISOWeek()
-	fmt.Printf("The current week number is: %d\n", week)
+	year, week := now.ISOWeek()
+	fmt.Printf("The current week number is: year:%d week:%d\n", year, week)
 	return nil
 }
