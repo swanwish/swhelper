@@ -1,0 +1,19 @@
+# The helper tool for my daily use
+
+## Show helper
+
+```
+go run main.go
+```
+
+## Show current time
+
+```
+go run main.go ct
+```
+
+## Show current week number
+
+```
+go run main.go wn
+```
