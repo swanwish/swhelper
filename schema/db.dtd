@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+        <!ELEMENT db (table|view|abstracttable|include)*>
+        <!ATTLIST db
+                description CDATA #IMPLIED
+                name CDATA #REQUIRED>
+        <!ELEMENT table (column)*>
+        <!ATTLIST table
+                description CDATA #IMPLIED
+                name CDATA #REQUIRED>
+        <!ELEMENT column (#PCDATA)>
+        <!ATTLIST column
+                autoincrement CDATA #IMPLIED
+                description CDATA #IMPLIED
+                json CDATA #IMPLIED
+                xml CDATA #IMPLIED
+                length CDATA #IMPLIED
+                name CDATA #REQUIRED
+                notnull CDATA #IMPLIED
+                pk CDATA #IMPLIED
+                skipupdate CDATA #IMPLIED
+                type (SMALLINT|INT|BIGINT|VARCHAR|TEXT|NUMERIC|LONGTEXT|DECIMAL) #REQUIRED
+                unique CDATA #IMPLIED
+                default CDATA #IMPLIED>
+        <!ELEMENT view (sql)*>
+        <!ATTLIST view
+                name CDATA #REQUIRED
+                description CDATA #IMPLIED>
+        <!ELEMENT sql (#PCDATA)>
+        <!ELEMENT abstracttable (column)*>
+        <!ATTLIST abstracttable
+                id CDATA #IMPLIED
+                description CDATA #IMPLIED>
+        <!ELEMENT include EMPTY>
+        <!ATTLIST include
+                file CDATA #REQUIRED>

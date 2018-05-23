@@ -28,7 +28,7 @@ var (
 func showCurrentTime(c *cli.Context) error {
 	now := time.Now()
 	currentTime := now.Format("2006-01-02 15:04:05")
-	fmt.Printf("The current time is: %s\nThe unix timestamp is: %d\n", currentTime, now.Unix())
+	fmt.Printf("The current time is: %s\nThe unix timestamp is: %d, Nanoseconds: %d\n", currentTime, now.Unix(), now.UnixNano()/1000000)
 	return nil
 }
 
