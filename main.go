@@ -20,6 +20,8 @@ func main() {
 	app.Commands = []cli.Command{
 		cmd.ShowCurrentTimeCmd,
 		cmd.ShowCurrentWeekNumCmd,
+		cmd.ShowWordDefinitionCmd,
+		cmd.FetchMsgBibleCmd,
 	}
 	app.Flags = append(app.Flags, []cli.Flag{}...)
 	app.Run(os.Args)

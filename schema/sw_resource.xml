@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE db SYSTEM "db.dtd">
+<db name="sw_resource">
+    <table name="t_request_data">
+        <column name="request_id" type="BIGINT" pk="1" autoincrement="1" json="requestId"/>
+        <column name="request_url" type="VARCHAR" length="512" notnull="1" json="requestUrl"/>
+        <column name="query_param" type="VARCHAR" length="1024" notnull="1" json="queryParam"/>
+        <column name="status" type="INT" notnull="1" json="status"/>
+        <column name="url_content" type="LONGTEXT" notnull="1" json="urlContent"/>
+        <column name="create_time" type="INT" notnull="1" skipupdate="1" json="createTime"/>
+    </table>
+</db>

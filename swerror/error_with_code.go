@@ -1,4 +1,4 @@
-package wserror
+package swerror
 
 func NewErrorWithCode(code int64, msg string) error {
 	return &ErrorWithCode{Code: code, Msg: msg}

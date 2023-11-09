@@ -1,4 +1,4 @@
-package wserror
+package swerror
 
 const (
 	// Database operation error messages
