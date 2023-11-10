@@ -21,7 +21,8 @@ func GetRequest(requestUrl string, data url.Values, headers http.Header) (string
 	if err != swerror.ErrNotExist {
 		logs.Errorf("Failed to get request data from database, the error is %#v", err)
 	}
-	status, content, err := utils.GetRequest(requestUrl, data, headers)
+	query := url.Values{}
+	status, content, err := utils.GetRequest(requestUrl, data, query, headers)
 	if err != nil {
 		logs.Errorf("Failed to get request from requestUrl %s, the error is %#v", requestUrl, err)
 		return "", err

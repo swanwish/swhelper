@@ -22,6 +22,7 @@ func main() {
 		cmd.ShowCurrentWeekNumCmd,
 		cmd.ShowWordDefinitionCmd,
 		cmd.FetchMsgBibleCmd,
+		cmd.UpdateWDServerListCmd,
 	}
 	app.Flags = append(app.Flags, []cli.Flag{}...)
 	app.Run(os.Args)
