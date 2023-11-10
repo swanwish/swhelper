@@ -14,14 +14,14 @@ import (
 )
 
 var (
-	UpdateWDServerListCmd = cli.Command{
-		Name:        "server.uwsl",
-		Usage:       "swhelper server.uwsl",
-		Description: "This command is used to update the server list for the wd command",
-		Action:      updateWDServerListAction,
+	UpdateServerCommandCmd = cli.Command{
+		Name:        "usc",
+		Usage:       "swhelper usc",
+		Description: "This command is used to update server commands",
+		Action:      updateServerCommandAction,
 		Flags: []cli.Flag{
 			stringFlag("p", "/Users/Stephen/OneDrive/Documents/servers.xlsx", "The excel file path for the server list"),
-			stringFlag("dest", "/Users/Stephen/tools/wd/libexec", "The destination for the generated files"),
+			stringFlag("d", "/Users/Stephen/tools/wd/libexec", "The destination for the generated files"),
 		},
 	}
 )
@@ -55,12 +55,12 @@ func (s ServerInfo) ConnectCommand() string {
 	}
 }
 
-func updateWDServerListAction(c *cli.Context) error {
+func updateServerCommandAction(c *cli.Context) error {
 	excelFilePath := c.String("p")
 	if !utils.FileExists(excelFilePath) {
 		return fmt.Errorf("The file path %s does not exists", excelFilePath)
 	}
-	dest := c.String("dest")
+	dest := c.String("d")
 	if !utils.FileExists(dest) {
 		return fmt.Errorf("The dest path %s does not exists", dest)
 	}

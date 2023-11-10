@@ -22,7 +22,8 @@ func main() {
 		cmd.ShowCurrentWeekNumCmd,
 		cmd.ShowWordDefinitionCmd,
 		cmd.FetchMsgBibleCmd,
-		cmd.UpdateWDServerListCmd,
+		cmd.UpdateServerCommandCmd,
+		cmd.ShowDoubleSideBookletPagesCmd,
 	}
 	app.Flags = append(app.Flags, []cli.Flag{}...)
 	app.Run(os.Args)
